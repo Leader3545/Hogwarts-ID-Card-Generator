@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Hogwarts ID Card Generator</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/1379351042306609194/1380948388526292992/1000038491-removebg-preview.png?ex=6845bbe8&is=68446a68&hm=7f6ecbd2dffe6de5fcc3774c6fd100d55e1a9629d6f6e0f3fcb188fa815966ee&=&format=webp&quality=lossless&width=625&height=625" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Hogwarts ID Card</h1>
+        <p>Hogwarts School of Witchcraft and Wizardry</p>
+      </header>
+      <main>
+        <form id="idForm" class="form-card">
+          <div class="form-group">
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" name="name" placeholder="ชื่อผู้ใช้" required />
+          </div>
+          <div class="form-group">
+            <label for="birthday">วันเกิด:</label>
+            <input type="date" id="birthday" name="birthday" required />
+          </div>
+          <div class="form-group">
+            <label for="gender">เพศ:</label>
+            <select id="gender" name="gender" required>
+              <option value="">--เลือก--</option>
+              <option value="ชาย">ชาย</option>
+              <option value="หญิง">หญิง</option>
+              <option value="ไม่ระบุ">ไม่ระบุ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="role">บทบาท:</label>
+            <input type="text" id="role" name="role" placeholder="เช่น นักเรียน, อาจารย์, เจ้าหน้าที่" required />
+          </div>
+          <div class="form-group">
+            <label for="house">บ้าน:</label>
+            <select id="house" name="house" required>
+              <option value="">--เลือกบ้าน--</option>
+              <option value="Gryffindor">Gryffindor</option>
+              <option value="Slytherin">Slytherin</option>
+              <option value="Ravenclaw">Ravenclaw</option>
+              <option value="Hufflepuff">Hufflepuff</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="userImage">อัปโหลดรูปภาพ:</label>
+            <input type="file" id="userImage" name="userImage" accept="image/*" />
+          </div>
+          <button type="submit" class="btn-submit">สร้างบัตร Hogwarts ID</button>
+        </form>
+        <div class="canvas-container">
+          <canvas id="cardCanvas" width="500" height="300"></canvas>
+          <button id="downloadBtn" class="btn-download">ดาวน์โหลดบัตร</button>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
